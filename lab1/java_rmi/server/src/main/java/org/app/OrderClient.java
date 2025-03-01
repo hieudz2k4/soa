@@ -2,9 +2,11 @@ package org.app;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.sql.DriverManager;
 
 public class OrderClient {
   public static void main(String[] args) {
+    System.out.println(DriverManager.class);
     try {
       Registry registry = LocateRegistry.getRegistry("192.168.33.10", 1099);
       OrderService service = (OrderService) registry.lookup("OrderService");

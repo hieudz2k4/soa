@@ -17,7 +17,7 @@ public class OrderServiceImp extends UnicastRemoteObject implements OrderService
 
     if (priceById.isEmpty()) return "Error Try Again!";
     else {
-      Double totalPrice = (Double) priceById.get() * quantity;
+      Double totalPrice = Math.round((Double) priceById.get() * quantity * 100.0) / 100.0;
       return "Order Comfirmed-----Total Price: " + totalPrice;
     }
   }

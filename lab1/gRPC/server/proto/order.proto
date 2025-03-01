@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "/order";
+
+message OrderRequest {
+  string productId = 1;
+  int32 quantity = 2;
+}
+
+message OrderResponse {
+  string confirmation = 1;
+}
+
+service OrderService {
+  rpc CalculateTotal(OrderRequest) returns (OrderResponse);
+}
