@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public class ProductServiceImp implements ProductService{
   private static final String DB_URL = "jdbc:mysql://localhost:3306/soa";
-  private static final String USER = "root";
-  private static final String PASSWORD = "Khongco2004@";
+  private static final String USER = "soa";
+  private static final String PASSWORD = "soa";
 
   @Override
   public Optional<Double> getPriceById(String productId) {
