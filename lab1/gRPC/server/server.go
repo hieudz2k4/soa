@@ -18,7 +18,7 @@ type server struct {
 }
 
 func connectDB() (*sql.DB, error) {
-	dsn := "root:Khongco2004@@tcp(localhost:3306)/soa"
+	dsn := "soa:soa@tcp(localhost:3306)/soa"
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
 		return nil, err
