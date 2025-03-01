@@ -11,14 +11,16 @@ public class OrderServiceImp extends UnicastRemoteObject implements OrderService
   }
 
   @Override
-  public String calculateTotal(String productId, int quantity) throws RemoteException {
+  public Double calculateTotal(String productId, int quantity) throws RemoteException {
     ProductService productService = new ProductServiceImp();
     Optional priceById = productService.getPriceById(productId);
 
-    if (priceById.isEmpty()) return "Error Try Again!";
+    if (priceById.isEmpty()) return null;
     else {
-      Double totalPrice = Math.round((Double) priceById.get() * quantity * 100.0) / 100.0;
-      return "Order Comfirmed-----Total Price: " + totalPrice;
+      Double totalPrice = (Double) priceById.get() * quantity;
+      Double totalPriceRound = Math.round(totalPrice * 100.0) / 100.0;
+      return totalPriceRound;
+
     }
   }
 

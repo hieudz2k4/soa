@@ -612,16 +612,19 @@ public final class OrderServiceProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string confirmation = 1;</code>
-     * @return The confirmation.
+     * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+     * @return Whether the totalPrice field is set.
      */
-    java.lang.String getConfirmation();
+    boolean hasTotalPrice();
     /**
-     * <code>string confirmation = 1;</code>
-     * @return The bytes for confirmation.
+     * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+     * @return The totalPrice.
      */
-    com.google.protobuf.ByteString
-        getConfirmationBytes();
+    com.google.protobuf.DoubleValue getTotalPrice();
+    /**
+     * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getTotalPriceOrBuilder();
   }
   /**
    * Protobuf type {@code proto.OrderResponse}
@@ -645,7 +648,6 @@ public final class OrderServiceProto {
       super(builder);
     }
     private OrderResponse() {
-      confirmation_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -661,43 +663,31 @@ public final class OrderServiceProto {
               org.app.order.OrderServiceProto.OrderResponse.class, org.app.order.OrderServiceProto.OrderResponse.Builder.class);
     }
 
-    public static final int CONFIRMATION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object confirmation_ = "";
+    private int bitField0_;
+    public static final int TOTALPRICE_FIELD_NUMBER = 1;
+    private com.google.protobuf.DoubleValue totalPrice_;
     /**
-     * <code>string confirmation = 1;</code>
-     * @return The confirmation.
+     * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+     * @return Whether the totalPrice field is set.
      */
     @java.lang.Override
-    public java.lang.String getConfirmation() {
-      java.lang.Object ref = confirmation_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        confirmation_ = s;
-        return s;
-      }
+    public boolean hasTotalPrice() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string confirmation = 1;</code>
-     * @return The bytes for confirmation.
+     * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+     * @return The totalPrice.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getConfirmationBytes() {
-      java.lang.Object ref = confirmation_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        confirmation_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.DoubleValue getTotalPrice() {
+      return totalPrice_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalPrice_;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DoubleValueOrBuilder getTotalPriceOrBuilder() {
+      return totalPrice_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalPrice_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -714,8 +704,8 @@ public final class OrderServiceProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(confirmation_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, confirmation_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getTotalPrice());
       }
       getUnknownFields().writeTo(output);
     }
@@ -726,8 +716,9 @@ public final class OrderServiceProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(confirmation_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, confirmation_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTotalPrice());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -744,8 +735,11 @@ public final class OrderServiceProto {
       }
       org.app.order.OrderServiceProto.OrderResponse other = (org.app.order.OrderServiceProto.OrderResponse) obj;
 
-      if (!getConfirmation()
-          .equals(other.getConfirmation())) return false;
+      if (hasTotalPrice() != other.hasTotalPrice()) return false;
+      if (hasTotalPrice()) {
+        if (!getTotalPrice()
+            .equals(other.getTotalPrice())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -757,8 +751,10 @@ public final class OrderServiceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIRMATION_FIELD_NUMBER;
-      hash = (53 * hash) + getConfirmation().hashCode();
+      if (hasTotalPrice()) {
+        hash = (37 * hash) + TOTALPRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalPrice().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -878,19 +874,29 @@ public final class OrderServiceProto {
 
       // Construct using org.app.order.OrderServiceProto.OrderResponse.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getTotalPriceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        confirmation_ = "";
+        totalPrice_ = null;
+        if (totalPriceBuilder_ != null) {
+          totalPriceBuilder_.dispose();
+          totalPriceBuilder_ = null;
+        }
         return this;
       }
 
@@ -924,9 +930,14 @@ public final class OrderServiceProto {
 
       private void buildPartial0(org.app.order.OrderServiceProto.OrderResponse result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.confirmation_ = confirmation_;
+          result.totalPrice_ = totalPriceBuilder_ == null
+              ? totalPrice_
+              : totalPriceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -941,10 +952,8 @@ public final class OrderServiceProto {
 
       public Builder mergeFrom(org.app.order.OrderServiceProto.OrderResponse other) {
         if (other == org.app.order.OrderServiceProto.OrderResponse.getDefaultInstance()) return this;
-        if (!other.getConfirmation().isEmpty()) {
-          confirmation_ = other.confirmation_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        if (other.hasTotalPrice()) {
+          mergeTotalPrice(other.getTotalPrice());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -973,7 +982,9 @@ public final class OrderServiceProto {
                 done = true;
                 break;
               case 10: {
-                confirmation_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getTotalPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -994,76 +1005,125 @@ public final class OrderServiceProto {
       }
       private int bitField0_;
 
-      private java.lang.Object confirmation_ = "";
+      private com.google.protobuf.DoubleValue totalPrice_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalPriceBuilder_;
       /**
-       * <code>string confirmation = 1;</code>
-       * @return The confirmation.
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+       * @return Whether the totalPrice field is set.
        */
-      public java.lang.String getConfirmation() {
-        java.lang.Object ref = confirmation_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          confirmation_ = s;
-          return s;
+      public boolean hasTotalPrice() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+       * @return The totalPrice.
+       */
+      public com.google.protobuf.DoubleValue getTotalPrice() {
+        if (totalPriceBuilder_ == null) {
+          return totalPrice_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalPrice_;
         } else {
-          return (java.lang.String) ref;
+          return totalPriceBuilder_.getMessage();
         }
       }
       /**
-       * <code>string confirmation = 1;</code>
-       * @return The bytes for confirmation.
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getConfirmationBytes() {
-        java.lang.Object ref = confirmation_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          confirmation_ = b;
-          return b;
+      public Builder setTotalPrice(com.google.protobuf.DoubleValue value) {
+        if (totalPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalPrice_ = value;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          totalPriceBuilder_.setMessage(value);
         }
-      }
-      /**
-       * <code>string confirmation = 1;</code>
-       * @param value The confirmation to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfirmation(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        confirmation_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string confirmation = 1;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
        */
-      public Builder clearConfirmation() {
-        confirmation_ = getDefaultInstance().getConfirmation();
+      public Builder setTotalPrice(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalPriceBuilder_ == null) {
+          totalPrice_ = builderForValue.build();
+        } else {
+          totalPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+       */
+      public Builder mergeTotalPrice(com.google.protobuf.DoubleValue value) {
+        if (totalPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            totalPrice_ != null &&
+            totalPrice_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+            getTotalPriceBuilder().mergeFrom(value);
+          } else {
+            totalPrice_ = value;
+          }
+        } else {
+          totalPriceBuilder_.mergeFrom(value);
+        }
+        if (totalPrice_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+       */
+      public Builder clearTotalPrice() {
         bitField0_ = (bitField0_ & ~0x00000001);
+        totalPrice_ = null;
+        if (totalPriceBuilder_ != null) {
+          totalPriceBuilder_.dispose();
+          totalPriceBuilder_ = null;
+        }
         onChanged();
         return this;
       }
       /**
-       * <code>string confirmation = 1;</code>
-       * @param value The bytes for confirmation to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
        */
-      public Builder setConfirmationBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        confirmation_ = value;
+      public com.google.protobuf.DoubleValue.Builder getTotalPriceBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
-        return this;
+        return getTotalPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getTotalPriceOrBuilder() {
+        if (totalPriceBuilder_ != null) {
+          return totalPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return totalPrice_ == null ?
+              com.google.protobuf.DoubleValue.getDefaultInstance() : totalPrice_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue totalPrice = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getTotalPriceFieldBuilder() {
+        if (totalPriceBuilder_ == null) {
+          totalPriceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  getTotalPrice(),
+                  getParentForChildren(),
+                  isClean());
+          totalPrice_ = null;
+        }
+        return totalPriceBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:proto.OrderResponse)
@@ -1136,16 +1196,19 @@ public final class OrderServiceProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013order.proto\022\005proto\"3\n\014OrderRequest\022\021\n\t" +
-      "productId\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\"%\n\rOrd" +
-      "erResponse\022\024\n\014confirmation\030\001 \001(\t2K\n\014Orde" +
-      "rService\022;\n\016CalculateTotal\022\023.proto.Order" +
-      "Request\032\024.proto.OrderResponseB\"\n\rorg.app" +
-      ".orderB\021OrderServiceProtob\006proto3"
+      "\n\013order.proto\022\005proto\032\036google/protobuf/wr" +
+      "appers.proto\"3\n\014OrderRequest\022\021\n\tproductI" +
+      "d\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\"A\n\rOrderRespon" +
+      "se\0220\n\ntotalPrice\030\001 \001(\0132\034.google.protobuf" +
+      ".DoubleValue2K\n\014OrderService\022;\n\016Calculat" +
+      "eTotal\022\023.proto.OrderRequest\032\024.proto.Orde" +
+      "rResponseB*\n\rorg.app.orderB\021OrderService" +
+      "ProtoZ\006/orderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_proto_OrderRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1158,8 +1221,9 @@ public final class OrderServiceProto {
     internal_static_proto_OrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_proto_OrderResponse_descriptor,
-        new java.lang.String[] { "Confirmation", });
+        new java.lang.String[] { "TotalPrice", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

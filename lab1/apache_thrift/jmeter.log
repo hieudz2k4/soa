@@ -1,0 +1,153 @@
+2025-03-01 23:29:28,915 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-03-01 23:29:28,953 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-03-01 23:29:28,953 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-03-01 23:29:28,961 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-03-01 23:29:28,961 INFO o.a.j.JMeter: Version 5.6.3
+2025-03-01 23:29:28,961 INFO o.a.j.JMeter: java.version=21.0.6
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: os.arch=x86_64
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: os.version=13.2.1
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: java.awt.headless=null
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-03-01 23:29:28,962 INFO o.a.j.JMeter: Available Processors =4
+2025-03-01 23:29:28,981 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-03-01 23:29:28,982 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-03-01 23:29:28,982 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.3/libexec
+2025-03-01 23:29:28,982 INFO o.a.j.JMeter: user.dir  =/Users/macbook/Desktop/document/soa/lab1/apache_thrift
+2025-03-01 23:29:28,982 INFO o.a.j.JMeter: PWD       =/Users/macbook/Desktop/document/soa/lab1/apache_thrift
+2025-03-01 23:29:28,984 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: MacBooks-MacBook-Air-2.local FullName: localhost
+2025-03-01 23:29:29,003 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2025-03-01 23:29:29,713 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2025-03-01 23:29:32,442 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-grpc-request.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,255 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/RMITestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,260 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/ThriftTestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,264 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,411 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,725 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-grpc-request.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,741 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/RMITestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,742 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/ThriftTestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,745 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,748 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:33,947 INFO o.j.r.JARSourceHTTP: Found cached repo
+2025-03-01 23:29:34,363 INFO o.j.r.PluginManager: Plugins Status: [jmeter-grpc-request=grpc-request, jpgc-perfmon=2.1, jpgc-plugins-manager=1.10, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2025-03-01 23:29:55,564 INFO o.a.j.s.FileServer: Default base='/Users/macbook/Desktop/document/soa/lab1/apache_thrift'
+2025-03-01 23:29:55,570 INFO o.a.j.g.a.Load: Loading file: /Users/macbook/Desktop/document/soa/lab1/apache_thrift/ThriftTestPlan.jmx
+2025-03-01 23:29:55,570 INFO o.a.j.s.FileServer: Set new base='/Users/macbook/Desktop/document/soa/lab1/apache_thrift'
+2025-03-01 23:29:55,854 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-03-01 23:29:55,867 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-03-01 23:29:55,871 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-03-01 23:29:55,873 INFO o.a.j.s.SaveService: Loading file: /Users/macbook/Desktop/document/soa/lab1/apache_thrift/ThriftTestPlan.jmx
+2025-03-01 23:29:56,154 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-grpc-request.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:56,167 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/RMITestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:56,167 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/ThriftTestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:56,170 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:56,171 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:29:56,173 ERROR o.a.j.p.j.c.g.JavaConfigGui: Exception registering implementation: [org.app.ThriftTestSampler] of interface: [interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], a dependency used by the plugin class is missing
+java.lang.NoClassDefFoundError: org/apache/thrift/TException
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3549) ~[?:?]
+	at java.base/java.lang.Class.getConstructor0(Class.java:3754) ~[?:?]
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2930) ~[?:?]
+	at org.apache.jmeter.util.JMeterUtils.loadServicesAndScanJars(JMeterUtils.java:375) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.protocol.java.config.gui.JavaConfigGui.createClassnamePanel(JavaConfigGui.java:140) ~[ApacheJMeter_java.jar:5.6.3]
+	at org.apache.jmeter.protocol.java.config.gui.JavaConfigGui.init(JavaConfigGui.java:127) ~[ApacheJMeter_java.jar:5.6.3]
+	at org.apache.jmeter.protocol.java.config.gui.JavaConfigGui.<init>(JavaConfigGui.java:106) ~[ApacheJMeter_java.jar:5.6.3]
+	at org.apache.jmeter.protocol.java.control.gui.JavaTestSamplerGui.init(JavaTestSamplerGui.java:63) ~[ApacheJMeter_java.jar:5.6.3]
+	at org.apache.jmeter.protocol.java.control.gui.JavaTestSamplerGui.<init>(JavaTestSamplerGui.java:46) ~[ApacheJMeter_java.jar:5.6.3]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.apache.jmeter.gui.GuiPackage.getGuiFromCache(GuiPackage.java:424) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.GuiPackage.getGui(GuiPackage.java:267) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.GuiPackage.getGui(GuiPackage.java:238) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addComponent(JMeterTreeModel.java:160) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addSubTree(JMeterTreeModel.java:131) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addSubTree(JMeterTreeModel.java:131) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.tree.JMeterTreeModel.addSubTree(JMeterTreeModel.java:123) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.GuiPackage.addSubTree(GuiPackage.java:555) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.insertLoadedTree(Load.java:201) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:132) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:103) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.Load.doActionAfterCheck(Load.java:90) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.AbstractActionWithNoRunningTest.doAction(AbstractActionWithNoRunningTest.java:44) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:83) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:65) ~[ApacheJMeter_core.jar:5.6.3]
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) [?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+Caused by: java.lang.ClassNotFoundException: org.apache.thrift.TException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 41 more
+2025-03-01 23:29:56,280 INFO o.a.j.s.FileServer: Set new base='/Users/macbook/Desktop/document/soa/lab1/apache_thrift'
+2025-03-01 23:30:54,161 ERROR o.a.j.JMeter: Uncaught exception in thread Thread[#30,AWT-EventQueue-0,6,main]
+java.lang.NoClassDefFoundError: org/apache/thrift/TException
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
+	at org.apache.jmeter.protocol.java.config.gui.JavaConfigGui.configureClassName(JavaConfigGui.java:185) ~[ApacheJMeter_java.jar:5.6.3]
+	at org.apache.jmeter.protocol.java.config.gui.JavaConfigGui.stateChanged(JavaConfigGui.java:175) ~[ApacheJMeter_java.jar:5.6.3]
+	at org.apache.jorphan.gui.JLabeledChoice.notifyChangeListeners(JLabeledChoice.java:288) ~[jorphan.jar:5.6.3]
+	at org.apache.jorphan.gui.JLabeledChoice.lambda$init$0(JLabeledChoice.java:145) ~[jorphan.jar:5.6.3]
+	at java.desktop/javax.swing.JComboBox.fireItemStateChanged(JComboBox.java:1257) ~[?:?]
+	at java.desktop/javax.swing.JComboBox.selectedItemChanged(JComboBox.java:1318) ~[?:?]
+	at java.desktop/javax.swing.JComboBox.contentsChanged(JComboBox.java:1365) ~[?:?]
+	at java.desktop/javax.swing.AbstractListModel.fireContentsChanged(AbstractListModel.java:127) ~[?:?]
+	at java.desktop/javax.swing.DefaultComboBoxModel.setSelectedItem(DefaultComboBoxModel.java:94) ~[?:?]
+	at java.desktop/javax.swing.JComboBox.actionPerformed(JComboBox.java:1350) ~[?:?]
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525) ~[?:?]
+	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740) ~[?:?]
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856) ~[?:?]
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810) ~[?:?]
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2956) ~[?:?]
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:3004) ~[?:?]
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2918) ~[?:?]
+	at java.desktop/java.awt.Component.processEvent(Component.java:6398) ~[?:?]
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996) ~[?:?]
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952) ~[?:?]
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883) ~[?:?]
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1146) ~[?:?]
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020) ~[?:?]
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4877) ~[?:?]
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98) ~[?:?]
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744) ~[?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+Caused by: java.lang.ClassNotFoundException: org.apache.thrift.TException
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 51 more

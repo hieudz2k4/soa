@@ -1,0 +1,43 @@
+2025-03-01 23:00:59,876 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-03-01 23:00:59,927 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-03-01 23:00:59,928 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-03-01 23:00:59,938 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-03-01 23:00:59,938 INFO o.a.j.JMeter: Version 5.6.3
+2025-03-01 23:00:59,938 INFO o.a.j.JMeter: java.version=21.0.6
+2025-03-01 23:00:59,938 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-03-01 23:00:59,938 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-03-01 23:00:59,939 INFO o.a.j.JMeter: os.arch=x86_64
+2025-03-01 23:00:59,939 INFO o.a.j.JMeter: os.version=13.2.1
+2025-03-01 23:00:59,939 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-03-01 23:00:59,939 INFO o.a.j.JMeter: java.awt.headless=null
+2025-03-01 23:00:59,939 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-03-01 23:00:59,939 INFO o.a.j.JMeter: Available Processors =4
+2025-03-01 23:00:59,959 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-03-01 23:00:59,959 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-03-01 23:00:59,960 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.6.3/libexec
+2025-03-01 23:00:59,960 INFO o.a.j.JMeter: user.dir  =/Users/macbook/Desktop/document/soa/lab1/gRPC
+2025-03-01 23:00:59,960 INFO o.a.j.JMeter: PWD       =/Users/macbook/Desktop/document/soa/lab1/gRPC
+2025-03-01 23:00:59,964 INFO o.a.j.JMeter: IP: 192.168.0.104 Name: MacBooks-MacBook-Air-2.local FullName: 192.168.0.104
+2025-03-01 23:00:59,997 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2025-03-01 23:01:01,089 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2025-03-01 23:01:05,833 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-grpc-request.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:07,929 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/RMITestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:07,958 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:08,291 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:08,690 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-grpc-request.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:08,717 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/RMITestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:08,721 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:08,723 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:01:08,949 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-bcde17b9a9325305c5ad3e8cc6f44cf7-gui
+2025-03-01 23:01:12,923 INFO o.j.r.PluginManager: Plugins Status: [jmeter-grpc-request=grpc-request, jpgc-perfmon=2.1, jpgc-plugins-manager=1.10, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2025-03-01 23:01:20,530 INFO o.a.j.s.FileServer: Default base='/Users/macbook/Desktop/document/soa/lab1/gRPC'
+2025-03-01 23:01:59,022 INFO o.a.j.s.FileServer: Set new base='/Users/macbook/Desktop/document/soa/lab1/apache_thrift'
+2025-03-01 23:01:59,400 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-03-01 23:01:59,420 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-03-01 23:01:59,425 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-03-01 23:02:06,362 INFO o.a.j.g.a.t.TemplateManager: Reading templates from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/templates/templates.xml
+2025-03-01 23:02:26,460 INFO o.a.j.g.a.t.TemplateManager: Reading templates from: /usr/local/Cellar/jmeter/5.6.3/libexec/bin/templates/templates.xml
+2025-03-01 23:04:30,126 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-grpc-request.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:04:30,145 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/RMITestSampler.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:04:30,152 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-03-01 23:04:30,155 INFO o.a.j.r.ClassFinder: Will scan jar /usr/local/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-perfmon-2.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.java.sampler.JavaSamplerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning

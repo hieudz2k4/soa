@@ -2,7 +2,8 @@ package org.app;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.Optional;
 
 public interface OrderService extends Remote {
-  String calculateTotal(String productId, int quantity) throws RemoteException;
+  Double calculateTotal(String productId, int quantity) throws RemoteException;
 }

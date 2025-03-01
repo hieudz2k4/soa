@@ -10,7 +10,7 @@ import org.app.order.OrderServiceProto.OrderResponse;
 
 public class OrderClient {
   public static void main(String[] args) throws InterruptedException {
-    String serverIP = "192.168.33.10";
+    String serverIP = "localhost";
     ManagedChannel channel = ManagedChannelBuilder.forAddress(serverIP, 50051)
         .usePlaintext()
         .build();
@@ -23,7 +23,13 @@ public class OrderClient {
           .build();
 
       OrderResponse response = stub.calculateTotal(request);
-      System.out.println("Order Confirmation: " + response.getConfirmation());
+
+      if (response.hasTotalPrice()) {
+        System.out.println("Order Confirmation: " + response.getTotalPrice());
+      } else {
+        System.out.println("Error");
+      }
+
     } finally {
       channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
     }

@@ -24,16 +24,15 @@ public class RMITestSampler extends AbstractJavaSamplerClient {
       Registry registry = LocateRegistry.getRegistry("192.168.33.10", 1099);
       OrderService service = (OrderService) registry.lookup("OrderService");
 
-      // Gọi phương thức calculateTotal (productId và quantity có thể được lấy từ context)
       String productId = context.getParameter("id", "00288978-506e-40e1-93c8-954390f3032c");
       String quantityStr = context.getParameter("quantity", "1");
       int quantity = Integer.parseInt(quantityStr);
 
-      String response = service.calculateTotal(productId, quantity);
+      Double response = service.calculateTotal(productId, quantity);
 
-      result.sampleEnd(); // Kết thúc đo thời gian
+      result.sampleEnd();
       result.setSuccessful(true);
-      result.setResponseData(response, "UTF-8");
+      result.setResponseData(response.toString(), "UTF-8");
       result.setResponseMessage("RMI call executed successfully");
       result.setResponseCodeOK();
     } catch (Exception e) {
