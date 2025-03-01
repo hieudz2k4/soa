@@ -10,7 +10,7 @@ import org.app.order.OrderServiceProto.OrderResponse;
 
 public class OrderClient {
   public static void main(String[] args) throws InterruptedException {
-    String serverIP = "localhost";
+    String serverIP = "192.168.33.10";
     ManagedChannel channel = ManagedChannelBuilder.forAddress(serverIP, 50051)
         .usePlaintext()
         .build();
