@@ -10,7 +10,7 @@ public class OrderClient {
   public static void main(String[] args) {
     TTransport transport = null;
     try {
-      transport = new TSocket("localhost", 9090);
+      transport = new TSocket("192.168.33.10", 9090);
       transport.open();
 
       TBinaryProtocol protocol = new TBinaryProtocol(transport);

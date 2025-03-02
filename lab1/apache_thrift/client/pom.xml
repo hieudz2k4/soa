@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.app</groupId>
-  <artifactId>client</artifactId>
+  <artifactId>ThriftTestSampler</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
@@ -57,4 +57,5 @@
       <version>5.6.2</version>
     </dependency>
   </dependencies>
+
 </project>

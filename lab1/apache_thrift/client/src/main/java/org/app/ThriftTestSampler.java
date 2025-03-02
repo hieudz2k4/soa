@@ -16,7 +16,7 @@ public class ThriftTestSampler extends AbstractJavaSamplerClient {
   @Override
   public Arguments getDefaultParameters() {
     Arguments defaultParameters = new Arguments();
-    defaultParameters.addArgument("host", "localhost");
+    defaultParameters.addArgument("host", "192.168.33.10");
     defaultParameters.addArgument("port", "9090");
     defaultParameters.addArgument("productId", "P12345");
     defaultParameters.addArgument("quantity", "5");
@@ -28,7 +28,7 @@ public class ThriftTestSampler extends AbstractJavaSamplerClient {
     SampleResult result = new SampleResult();
     result.sampleStart();
 
-    String host = context.getParameter("host", "localhost");
+    String host = context.getParameter("host", "192.168.33.10");
     int port = Integer.parseInt(context.getParameter("port", "9090"));
     String productId = context.getParameter("productId", "P12345");
     int quantity = Integer.parseInt(context.getParameter("quantity", "5"));

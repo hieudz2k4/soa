@@ -13,6 +13,7 @@ public class RMITestSampler extends AbstractJavaSamplerClient {
     Arguments defaultParameters = new Arguments();
     defaultParameters.addArgument("id", "00288978-506e-40e1-93c8-954390f3032c");
     defaultParameters.addArgument("quantity", "2");
+    defaultParameters.addArgument("processingDelayMs", "100");
     return defaultParameters;
   }
 
@@ -20,15 +21,18 @@ public class RMITestSampler extends AbstractJavaSamplerClient {
   public SampleResult runTest(JavaSamplerContext context) {
     SampleResult result = new SampleResult();
     result.sampleStart();
+    String serverIP = "192.168.33.10";
     try {
-      Registry registry = LocateRegistry.getRegistry("192.168.33.10", 1099);
+      Registry registry = LocateRegistry.getRegistry(serverIP, 1099);
       OrderService service = (OrderService) registry.lookup("OrderService");
 
       String productId = context.getParameter("id", "00288978-506e-40e1-93c8-954390f3032c");
       String quantityStr = context.getParameter("quantity", "1");
       int quantity = Integer.parseInt(quantityStr);
+      String processingDelayStr = context.getParameter("processingDelayMs", "100");
+      long processingDelayMs = Long.parseLong(processingDelayStr);
 
-      Double response = service.calculateTotal(productId, quantity);
+      Double response = service.calculateTotal(productId, quantity, processingDelayMs);
 
       result.sampleEnd();
       result.setSuccessful(true);
