@@ -1,0 +1,10 @@
+FROM openjdk:17
+WORKDIR /app
+
+COPY .env ./
+
+COPY target/pastebin-0.0.1-SNAPSHOT.jar ./be_soa.jar
+
+EXPOSE 8080
+# Chạy ứng dụng
+CMD ["java", "-jar", "be_soa.jar"]
