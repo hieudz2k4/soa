@@ -1,0 +1,24 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hieuhoctap2004@gmail.com
+    password: vgrj klze vsmk cchw
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.ssl.trust: smtp.gmail.com
+      spring.mail.properties.mail.smtp.pool: true
+      spring.mail.properties.mail.smtp.pool.size: 5
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+grpc:
+  server:
+    port: 9091
+server:
+  port: 8082

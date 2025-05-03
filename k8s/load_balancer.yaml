@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer-3d-voice-chat-lb # Tên cho Service LoadBalancer (nên khác tên Deployment)
+spec:
+  type: LoadBalancer # Chỉ định loại Service là LoadBalancer
+  selector:
+    app: my_app # Phải khớp với label của Pods trong Deployment của bạn
+  ports:
+    - protocol: TCP
+      port:
+        80 # Cổng mà LoadBalancer bên ngoài sẽ lắng nghe.
+        # Traffic đến cổng này sẽ được chuyển tiếp vào bên trong.
+      targetPort:
+        80 # Cổng mà container trong Pod đang lắng nghe (containerPort)
+        # LoadBalancer sẽ gửi traffic đến cổng này của Pods.

@@ -1,0 +1,29 @@
+curl -X POST http://localhost:8080/realms/soa/protocol/openid-connect/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials" \
+  -d "client_id=auth_service" \
+  -d "client_secret=dKKnfEDXlWwPxo9MnxnmG1KuB7Pgw3f0"
+
+curl -X GET http://localhost:8080/admin/realms/soa/users?email=user@example.com \
+  -H "Authorization: Bearer
+
+curl -X POST 'http://localhost:8080/realms/{realm}/protocol/openid-connect/token' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'client_id={client_id}' \
+  -d 'client_secret={client_secret}' \
+  -d 'refresh_token={refresh_token}' \
+  -d 'grant_type=refresh_token'
+
+GET http://localhost:8080/admin/realms/{realm}/users
+
+Headers:
+Authorization: Bearer {access_token}
+
+PUT http://localhost:8080/admin/realms/soa/users/45c0a299-5a36-46a5-87c1-827494a3e85d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkOTVjYzJlZi1lYzE2LTQyYjMtYWYxNi04YjA4YmIxMGQ0NTUifQ.eyJleHAiOjE3NDUxMjg0NDYsImlhdCI6MTc0NTEyODE0NiwianRpIjoiY2U4OTc0NzQtMzk2Ny00MDE4LTgwNDktZjZhMTQ5Yjk2ZGQ5IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zb2EiLCJhdWQiOlsicmVhbG0tbWFuYWdlbWVudCIsImFjY291bnQiXSwic3ViIjoiNmYwNmMzMDQtZWYyOC00MGRjLTg4ODgtMTZhNmUwZWQzY2NlIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXV0aF9zZXJ2aWNlIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zb2EiLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJtYW5hZ2UtdXNlcnMiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxOTIuMTY4LjY1LjEiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1hdXRoX3NlcnZpY2UiLCJjbGllbnRBZGRyZXNzIjoiMTkyLjE2OC42NS4xIiwiY2xpZW50X2lkIjoiYXV0aF9zZXJ2aWNlIn0.1SpvNl00wMC0JCo7SyxEMWMUC7xn8I_uIdERH5lDW_Y
+
+{
+  "email": "22028221@vnu.edu.vn",
+  "emailVerified": false
+}

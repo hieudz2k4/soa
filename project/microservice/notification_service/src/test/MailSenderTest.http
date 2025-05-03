@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/v1/mail/sender
+Content-Type: application/json
+
+{
+  "to": "hieuhoctap2004@gmail.com",
+  "subject": "subject",
+  "body": "body"
+}

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 3d-voice-chat # Tên của Deployment
+spec:
+  replicas: 3 # Số lượng bản sao (pods) bạn muốn chạy
+  selector:
+    matchLabels:
+      app: my_app # Các pod được quản lý bởi Deployment này sẽ có label 'app: my-app'
+  template:
+    metadata:
+      labels:
+        app: my_app # Label cho các pod được tạo bởi Deployment
+    spec:
+      containers:
+        - name: 3d-voice-chat # Tên của container
+          image: hieudz2004/fe_3d_voice_chat:v1 # Image Docker bạn muốn sử dụng (ví dụ: nginx:latest)
+          ports:
+            - containerPort: 80 # Cổng mà container lắng nghe

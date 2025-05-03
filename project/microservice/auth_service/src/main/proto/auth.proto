@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package auth;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
+
+// --- Java Options ---
+option java_multiple_files = true;         // Tạo các file Java riêng biệt
+option java_package = "org.app.auth_service.grpc"; // Package Java cho code được tạo ra
+// --- End Java Options ---
+
+
+service AuthService {
+  rpc Authenticate(google.protobuf.Empty) returns (AuthenticateResponse) {}
+}
+
+message AuthenticateResponse {
+  bool authenticated = 1;          // Trạng thái xác thực
+  string user_id = 2;              // ID người dùng (lấy từ claim 'sub')
+  google.protobuf.Struct claims = 3; // Các claims khác từ token (tùy chọn)
+}

@@ -1,0 +1,27 @@
+grpc:
+  server:
+    port: 9090
+  client:
+    notification_service:
+      address: static://localhost:9091
+      negotiation-type: plaintext
+
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/soa
+          jwk-set-uri: http://localhost:8080/realms/soa/protocol/openid-connect/certs
+          audiences: account
+          cache:
+            enabled: true
+            cache-duration: 60
+            cache-size: 1
+
+keycloak.base-url: http://localhost:8080
+keycloak.client-id: auth_service
+keycloak.client-secret: ${KEYCLOAK_CLIENT_SECRET:uU8MaDJaFGQ0LKYLtrs2qohB2J6PzoKW}
+keycloak.realm: soa
+

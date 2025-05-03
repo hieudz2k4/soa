@@ -1,11 +1,25 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { BarChart, Bar, XAxis, YAxis, LineChart, Line, AreaChart, Area, CartesianGrid } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { useTheme } from "next-themes"
+import { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  LineChart,
+  Line,
+  AreaChart,
+  Area,
+  CartesianGrid,
+} from "recharts";
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTheme } from "next-themes";
 
 // Mock data for different time periods
 const mockHourlyData = [
@@ -16,7 +30,7 @@ const mockHourlyData = [
   { time: "20m", visits: 72 },
   { time: "10m", visits: 85 },
   { time: "now", visits: 92 },
-]
+];
 
 const mockWeeklyData = [
   { day: "Mon", visits: 1240 },
@@ -26,7 +40,7 @@ const mockWeeklyData = [
   { day: "Fri", visits: 1490 },
   { day: "Sat", visits: 980 },
   { day: "Sun", visits: 870 },
-]
+];
 
 const mockMonthlyData = [
   { month: "Jan", visits: 2340 },
@@ -35,27 +49,27 @@ const mockMonthlyData = [
   { month: "Apr", visits: 3890 },
   { month: "May", visits: 5432 },
   { month: "Jun", visits: 6210 },
-]
+];
 
 export function StatsCard() {
-  const [totalPastes, setTotalPastes] = useState(0)
-  const [activeVisitors, setActiveVisitors] = useState(0)
-  const [selectedPeriod, setSelectedPeriod] = useState("monthly")
-  const [mounted, setMounted] = useState(false)
-  const { theme } = useTheme()
+  const [totalPastes, setTotalPastes] = useState(0);
+  const [activeVisitors, setActiveVisitors] = useState(0);
+  const [selectedPeriod, setSelectedPeriod] = useState("monthly");
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
     // Simulate fetching stats
-    setTotalPastes(12458)
+    setTotalPastes(12458);
 
     // Simulate active visitors with a random number that changes occasionally
     const interval = setInterval(() => {
-      setActiveVisitors(Math.floor(Math.random() * 50) + 20)
-    }, 5000)
+      setActiveVisitors(Math.floor(Math.random() * 50) + 20);
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   const getChartData = () => {
     switch (selectedPeriod) {
@@ -66,7 +80,7 @@ export function StatsCard() {
           valueKey: "visits",
           formatter: (value: number) => `${value}`,
           chartType: "line",
-        }
+        };
       case "weekly":
         return {
           data: mockWeeklyData,
@@ -74,7 +88,7 @@ export function StatsCard() {
           valueKey: "visits",
           formatter: (value: number) => `${value}`,
           chartType: "area",
-        }
+        };
       case "monthly":
       default:
         return {
@@ -83,11 +97,11 @@ export function StatsCard() {
           valueKey: "visits",
           formatter: (value: number) => `${value / 1000}k`,
           chartType: "bar",
-        }
+        };
     }
-  }
+  };
 
-  const { data, dataKey, chartType } = getChartData()
+  const { data, dataKey, chartType } = getChartData();
 
   const renderChart = () => {
     switch (chartType) {
@@ -104,7 +118,12 @@ export function StatsCard() {
           >
             <LineChart data={data}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey={dataKey} fontSize={12} tickLine={false} axisLine={false} />
+              <XAxis
+                dataKey={dataKey}
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
               <YAxis fontSize={12} tickLine={false} axisLine={false} />
               <ChartTooltip content={<ChartTooltipContent />} />
               <Line
@@ -113,11 +132,15 @@ export function StatsCard() {
                 stroke="var(--color-visits)"
                 strokeWidth={2}
                 dot={{ fill: "var(--color-visits)", r: 4 }}
-                activeDot={{ fill: "var(--color-visits)", r: 6, strokeWidth: 2 }}
+                activeDot={{
+                  fill: "var(--color-visits)",
+                  r: 6,
+                  strokeWidth: 2,
+                }}
               />
             </LineChart>
           </ChartContainer>
-        )
+        );
       case "area":
         return (
           <ChartContainer
@@ -132,12 +155,25 @@ export function StatsCard() {
             <AreaChart data={data}>
               <defs>
                 <linearGradient id="colorVisits" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="var(--color-visits)" stopOpacity={0.8} />
-                  <stop offset="95%" stopColor="var(--color-visits)" stopOpacity={0} />
+                  <stop
+                    offset="5%"
+                    stopColor="var(--color-visits)"
+                    stopOpacity={0.8}
+                  />
+                  <stop
+                    offset="95%"
+                    stopColor="var(--color-visits)"
+                    stopOpacity={0}
+                  />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey={dataKey} fontSize={12} tickLine={false} axisLine={false} />
+              <XAxis
+                dataKey={dataKey}
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
               <YAxis fontSize={12} tickLine={false} axisLine={false} />
               <ChartTooltip content={<ChartTooltipContent />} />
               <Area
@@ -149,7 +185,7 @@ export function StatsCard() {
               />
             </AreaChart>
           </ChartContainer>
-        )
+        );
       case "bar":
       default:
         return (
@@ -164,15 +200,25 @@ export function StatsCard() {
           >
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey={dataKey} fontSize={12} tickLine={false} axisLine={false} />
+              <XAxis
+                dataKey={dataKey}
+                fontSize={12}
+                tickLine={false}
+                axisLine={false}
+              />
               <YAxis fontSize={12} tickLine={false} axisLine={false} />
               <ChartTooltip content={<ChartTooltipContent />} />
-              <Bar dataKey="visits" fill="var(--color-visits)" radius={[4, 4, 0, 0]} maxBarSize={60} />
+              <Bar
+                dataKey="visits"
+                fill="var(--color-visits)"
+                radius={[4, 4, 0, 0]}
+                maxBarSize={60}
+              />
             </BarChart>
           </ChartContainer>
-        )
+        );
     }
-  }
+  };
 
   return (
     <>
@@ -183,11 +229,17 @@ export function StatsCard() {
         <CardContent>
           <div className="space-y-4">
             <div>
-              <p className="text-sm font-medium text-muted-foreground">Total Pastes</p>
-              <p className="text-2xl font-bold">{totalPastes.toLocaleString()}</p>
+              <p className="text-sm font-medium text-muted-foreground">
+                Total Pastes
+              </p>
+              <p className="text-2xl font-bold">
+                {totalPastes.toLocaleString()}
+              </p>
             </div>
             <div>
-              <p className="text-sm font-medium text-muted-foreground">Active Visitors</p>
+              <p className="text-sm font-medium text-muted-foreground">
+                Active Visitors
+              </p>
               <div className="flex items-center">
                 <p className="text-2xl font-bold">{activeVisitors}</p>
                 <span className="ml-2 inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -204,7 +256,12 @@ export function StatsCard() {
           </div>
         </CardHeader>
         <CardContent>
-          <Tabs defaultValue="monthly" value={selectedPeriod} onValueChange={setSelectedPeriod} className="mb-4">
+          <Tabs
+            defaultValue="monthly"
+            value={selectedPeriod}
+            onValueChange={setSelectedPeriod}
+            className="mb-4"
+          >
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="hourly">1 Hour</TabsTrigger>
               <TabsTrigger value="weekly">1 Week</TabsTrigger>
@@ -216,6 +273,5 @@ export function StatsCard() {
         </CardContent>
       </Card>
     </>
-  )
+  );
 }
-
