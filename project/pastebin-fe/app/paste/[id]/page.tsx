@@ -41,7 +41,7 @@ export default function PastePage() {
           setShowBurnWarning(true);
         } else {
           const responseTotalView = await axios.get(
-            `http://47.237.129.200:8080/api/pastes/${pasteId}/stats`,
+            `http://localhost:8079/api/pastes/${pasteId}/stats`,
           );
 
           setTotalViews(responseTotalView.data.viewCount);

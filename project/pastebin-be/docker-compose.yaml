@@ -1,0 +1,33 @@
+version: 3.8
+
+services:
+  redis:
+    image: redis:7
+    container_name: redis
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: soa
+      MYSQL_USER: soa
+      MYSQL_PASSWORD: soa
+    restart: unless-stopped
+
+  pastebin:
+    build: .
+    container_name: pastebin
+    depends_on:
+      - redis
+      - mysql
+    ports:
+      - "8079:8080"
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      MYSQL_URL: jdbc:mysql://mysql:3306/soa
+      MYSQL_USER: soa
+      MYSQL_PASS: soa
+    restart: unless-stopped

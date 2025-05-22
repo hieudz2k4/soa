@@ -1,5 +1,6 @@
 package uet.soa.pastebin.infrastructure.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,18 +22,20 @@ import java.time.Duration;
 @Configuration
 @EnableCaching
 public class RedisConfig {
+    @Value("${redis.host}")
+    private String host;
+    @Value("${redis.port:6379}")
+    private int port;
+    @Value("${redis.password:")
+    private String password;
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
-        String host = System.getProperty("SPRING_REDIS_HOST");
-        int port = Integer.parseInt(System.getProperty("SPRING_REDIS_PORT"));
-        String password = System.getProperty("SPRING_REDIS_PASSWORD");
-
+        System.out.println(host + " " + port);
         RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration();
         configuration.setHostName(host);
         configuration.setPort(port);
         configuration.setPassword(RedisPassword.of(password));
         LettuceClientConfiguration clientConfig = LettuceClientConfiguration.builder()
-            .useSsl()
             .build();
 
         return new LettuceConnectionFactory(configuration, clientConfig);

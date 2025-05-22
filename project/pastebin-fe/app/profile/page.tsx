@@ -248,11 +248,11 @@ export default function ProfilePage() {
   const stats = [
     {
       title: "Total Pastes",
-      value: 127,
+      value: 5,
     },
     {
       title: "Total Views",
-      value: 8521,
+      value: 14,
     },
   ];
 

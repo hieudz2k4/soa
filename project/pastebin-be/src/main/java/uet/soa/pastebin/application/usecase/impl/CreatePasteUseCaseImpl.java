@@ -13,14 +13,16 @@ import uet.soa.pastebin.domain.repository.PasteRepository;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
+import uet.soa.pastebin.infrastructure.service.UserPasteService;
 
 @AllArgsConstructor
 public class CreatePasteUseCaseImpl implements CreatePasteUseCase {
     private final PasteRepository pasteRepository;
+    private final UserPasteService userPasteService;
     private final ExpirationPolicyRepository expirationPolicyRepository;
 
     @Override
-    public CreatePasteResponse execute(CreatePasteRequest request) {
+    public CreatePasteResponse execute(CreatePasteRequest request, String userId) {
         Content content = Content.of(request.content());
         ExpirationPolicy.ExpirationPolicyType policyType = ExpirationPolicy.ExpirationPolicyType.valueOf(request.policyType());
         String duration = request.duration();
@@ -36,6 +38,7 @@ public class CreatePasteUseCaseImpl implements CreatePasteUseCase {
         }
 
         Paste paste = Paste.create(content, LocalDateTime.now(), policy);
+        userPasteService.saveUserPaste(paste.publishUrl().toString(), userId);
         pasteRepository.save(paste);
 
         return new CreatePasteResponse(paste.publishUrl().toString());

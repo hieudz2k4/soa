@@ -32,7 +32,7 @@ export interface AnalyticsResponse {
 
 // Create Axios instance with base URL
 const api = axios.create({
-  baseURL: "http://47.237.129.200:8080/api",
+  baseURL: "http://localhost:8079/api",
   headers: {
     "Content-Type": "application/json",
   },

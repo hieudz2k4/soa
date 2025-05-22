@@ -15,9 +15,9 @@ public class PasteController {
     private final CreatePasteUseCase createPasteUseCase;
     private final RetrievePasteUseCase retrievePasteUseCase;
 
-    @PostMapping
-    public ResponseEntity<CreatePasteResponse> createPaste(@RequestBody CreatePasteRequest request) {
-        CreatePasteResponse response = createPasteUseCase.execute(request);
+    @PostMapping("/{userId}")
+    public ResponseEntity<CreatePasteResponse> createPaste(@PathVariable String userId, @RequestBody CreatePasteRequest request) {
+        CreatePasteResponse response = createPasteUseCase.execute(request, userId);
         return ResponseEntity.ok(response);
     }
 
